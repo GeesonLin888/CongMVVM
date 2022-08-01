@@ -1,0 +1,13 @@
+ext {
+    kotlin_version = "1.4.32"
+    ktx_version = "1.2.0"
+    appcompat_version = "1.2.0"
+    material_version = "1.2.1"
+    constraintlayout_version = "2.0.4"
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = 30
+    versionCode = 1
+    versionName = "1.0"
+}

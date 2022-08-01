@@ -1,7 +1,6 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
-    id 'kotlin-kapt'
 }
 
 android {
@@ -9,17 +8,13 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.bigbaby.congmvvm"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    dataBinding {
-        enabled = true
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -39,15 +34,10 @@ android {
 
 dependencies {
 
-    implementation project(':base')
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.ext.kotlin_version"
     implementation "androidx.core:core-ktx:$rootProject.ext.ktx_version"
     implementation "androidx.appcompat:appcompat:$rootProject.ext.appcompat_version"
     implementation "com.google.android.material:material:$rootProject.ext.material_version"
-    implementation "androidx.constraintlayout:constraintlayout:$rootProject.ext.constraintlayout_version"
-    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
